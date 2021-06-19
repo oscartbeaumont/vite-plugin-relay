@@ -14,10 +14,12 @@
     "vite": ">2.0.0-0"
   },
   "dependencies": {
-    "graphql": "^15.5.0"
+    "@babel/core": "^7.14.6",
+    "babel-plugin-relay": "^11.0.2"
   },
   "devDependencies": {
     "@alloc/prettier-config": "^1.0.0",
+    "@types/babel__core": "^7.1.14",
     "@types/node": "^14.14.20",
     "prettier": "^2.0.5",
     "typescript": "^4.0.0",
