@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-relay",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A vite plugin for relay",
   "author": "Oscar Beaumont",
   "license": "MIT",
@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
-    "babel-plugin-relay": "^11.0.2"
+    "babel-plugin-relay": "^11.0.2",
+    "graphql": "^15.5.0"
   },
   "devDependencies": {
     "@alloc/prettier-config": "^1.0.0",
