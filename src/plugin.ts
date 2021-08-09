@@ -9,7 +9,7 @@ export default {
       const out = transformSync(src, {
         plugins: [
           [
-            'relay',
+            require.resolve('babel-plugin-relay'),
             {
               eagerESModules: true,
             },
