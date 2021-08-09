@@ -5,7 +5,7 @@ export default {
   name: "vite:relay",
   config: () => ({
     define: {
-      global: "window",
+      global: "globalThis",
     },
   }),
   transform(src, id) {
