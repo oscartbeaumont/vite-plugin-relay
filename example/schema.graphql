@@ -53,11 +53,5 @@ input ShipsFind {
 }
 
 type Query {
-  ships(
-    find: ShipsFind
-    limit: Int
-    offset: Int
-    order: String
-    sort: String
-  ): [Ship]
+  ships(find: ShipsFind, limit: Int, offset: Int, order: String, sort: String): [Ship]
 }

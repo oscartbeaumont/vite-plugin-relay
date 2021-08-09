@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import reactRefresh from '@vitejs/plugin-react-refresh'
-import relay from 'vite-plugin-relay'
+import { defineConfig } from "vite";
+import reactRefresh from "@vitejs/plugin-react-refresh";
+import relay from "vite-plugin-relay";
 
 export default defineConfig({
   define: {
-    global: 'window',
+    global: "window",
   },
   plugins: [reactRefresh(), relay],
-})
+});

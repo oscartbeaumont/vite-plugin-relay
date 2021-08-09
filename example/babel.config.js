@@ -1,14 +1,10 @@
-module.exports = api => {
-  const isTest = api.env('test')
+module.exports = (api) => {
+  const isTest = api.env("test");
 
-  if (!isTest) return {}
+  if (!isTest) return {};
 
   return {
-    presets: [
-      '@babel/preset-env',
-      '@babel/preset-typescript',
-      '@babel/preset-react',
-    ],
-    plugins: ['@babel/plugin-transform-runtime', 'relay'],
-  }
-}
+    presets: ["@babel/preset-env", "@babel/preset-typescript", "@babel/preset-react"],
+    plugins: ["@babel/plugin-transform-runtime", "relay"],
+  };
+};

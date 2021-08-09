@@ -21,6 +21,7 @@ Next setup NPM scripts in the `package.json`. One is required for Vite and the o
   "relay": "relay-compiler"
 },
 ```
+
 Next setup `relay.config.js` more information about this can be found in the [official relay docs](https://relay.dev/docs/getting-started/installation-and-setup/#set-up-relay-with-a-single-config-file).
 
 Finally add `vite-plugin-relay` to your Vite configuration (`vite.config.ts`).
@@ -33,4 +34,5 @@ export default defineConfig({
   plugins: [..., relay],
 });
 ```
+
 Now your project is setup to use Relay with Vite!
