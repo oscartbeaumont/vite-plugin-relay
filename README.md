@@ -1,8 +1,11 @@
-# Vite Plugin Relay
+<h1 align="center">Vite Plugin Relay</h1>
 
-Add relay support to your Vite project.
+[![NPM](https://img.shields.io/npm/v/vite-plugin-relay)](https://www.npmjs.com/package/vite-plugin-relay)
+[![CI workflow](https://github.com/oscartbeaumont/vite-plugin-relay/actions/workflows/ci.yml/badge.svg)](https://github.com/oscartbeaumont/vite-plugin-relay/actions)
 
-Created with the help of [@Brendonovich](https://github.com/Brendonovich).
+Add relay support to your [Vite](https://vitejs.dev) projects.
+
+Created with the help of [@Brendonovich](https://github.com/Brendonovich) and thanks to [@kesne](https://github.com/kesne) for adding [pnpm](https://pnpm.io) support.
 
 ## Usage
 
