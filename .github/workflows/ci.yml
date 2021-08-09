@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+      # Note: This is disabled because it was causing issues with installation of the example application
+      # - name: Use Node Modules Cache
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: "**/node_modules"
+      #     key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install Dependencies for Vite Plugin Relay
+        run: yarn
+      - name: Build Vite Plugin Relay
+        run: yarn build
+      - name: Install Dependencies for Example Site
+        run: yarn --cwd ./example
+      - name: Test Example Site
+        run: yarn --cwd ./example test
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+      - name: Use Node Modules Cache
+        uses: actions/cache@v2
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install Dependencies for Vite Plugin Relay
+        run: yarn
+      - name: Lint
+        run: yarn lint

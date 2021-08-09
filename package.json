@@ -6,6 +6,11 @@
     "name": "Oscar Beaumont",
     "email": "oscar@otbeaumont.me"
   },
+  "main": "dist/plugin.js",
+  "types": "dist/plugin.d.ts",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,8 +25,6 @@
     "vite-plugin",
     "vite-plugin-relay"
   ],
-  "main": "dist/plugin.js",
-  "types": "dist/plugin.d.ts",
   "scripts": {
     "build": "tsc -p .",
     "lint": "prettier --check . && eslint src/** example/src/**",
