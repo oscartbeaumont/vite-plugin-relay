@@ -3,6 +3,11 @@ import { transformSync } from "@babel/core";
 
 export default {
   name: "vite:relay",
+  config: () => ({
+    define: {
+      global: "window",
+    },
+  }),
   transform(src, id) {
     let code = src;
     if (/.(t|j)sx?/.test(id) && src.includes("graphql`")) {
