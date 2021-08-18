@@ -32,23 +32,24 @@
     "prepare": "husky install && yarn build"
   },
   "peerDependencies": {
+    "graphql": "^15.0.0",
     "vite": ">2.0.0-0"
   },
   "dependencies": {
     "@babel/core": "^7.15.0",
-    "@typescript-eslint/eslint-plugin": "^4.29.1",
-    "@typescript-eslint/parser": "^4.29.1",
-    "babel-plugin-relay": "^11.0.2",
-    "graphql": "^15.5.1",
-    "vite": "^2.4.4"
+    "babel-plugin-relay": "^11.0.2"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.15",
     "@types/node": "^16.4.13",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
+    "graphql": "^15.5.1",
     "husky": "^7.0.1",
     "prettier": "^2.3.2",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "vite": "^2.4.4"
   }
 }
