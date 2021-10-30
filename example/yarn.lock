@@ -2473,10 +2473,10 @@ graceful-fs@^4.2.4:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
   integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
 
-graphql@^15.5.3:
-  version "15.5.3"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.3.tgz#c72349017d5c9f5446a897fe6908b3186db1da00"
-  integrity sha512-sM+jXaO5KinTui6lbK/7b7H/Knj9BpjGxZ+Ki35v7YbUJxxdBCUqNM0h3CRVU1ZF9t5lNiBzvBCSYPvIwxPOQA==
+graphql@^15.7.2:
+  version "15.7.2"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.7.2.tgz#85ab0eeb83722977151b3feb4d631b5f2ab287ef"
+  integrity sha512-AnnKk7hFQFmU/2I9YSQf3xw44ctnSFCfp3zE0N6W174gqe9fWG/2rKaKxROK7CcI3XtERpjEKFqts8o319Kf7A==
 
 has-flag@^3.0.0:
   version "3.0.0"
