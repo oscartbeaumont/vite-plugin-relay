@@ -39,3 +39,13 @@ export default defineConfig({
 ```
 
 Now your project is setup to use Relay with Vite!
+
+## Server Side Rendering
+
+Import the following in `entry-server.js`
+
+```js
+if (typeof (window as any).global === 'undefined') {
+  (window as any).global = globalThis;
+}
+```
