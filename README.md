@@ -42,7 +42,7 @@ Now your project is setup to use Relay with Vite!
 
 ## Server Side Rendering
 
-Import the following in `entry-server.js`
+If you are planning to use this plugin with server side rendering you may need to define `window`. You could do this by putting the following snippet in your [`entry-server.js`](https://vitejs.dev/guide/ssr.html#source-structure) file.
 
 ```js
 if (typeof (window as any).global === 'undefined') {
