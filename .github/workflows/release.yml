@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
       - name: Install Dependencies for Vite Plugin Relay
-        run: yarn
+        run: yarn install --frozen-lockfile
       - name: Build Vite Plugin Relay
         run: yarn build
       - name: Publish to NPM

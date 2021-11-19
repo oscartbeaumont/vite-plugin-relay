@@ -22,11 +22,13 @@ jobs:
       #     path: "**/node_modules"
       #     key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies for Vite Plugin Relay
-        run: yarn
+        run: yarn install --frozen-lockfile
+      - name: Install Playwright
+        run: npx playwright install --with-deps
       - name: Build Vite Plugin Relay
         run: yarn build
       - name: Install Dependencies for Example Site
-        run: yarn --cwd ./example
+        run: yarn --cwd ./example install --frozen-lockfile
       - name: Test Example Site
         run: yarn --cwd ./example test
 
@@ -43,6 +45,6 @@ jobs:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies for Vite Plugin Relay
-        run: yarn
+        run: yarn install --frozen-lockfile
       - name: Lint
         run: yarn lint
