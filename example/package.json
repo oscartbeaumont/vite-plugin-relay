@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.16.3",
-    "@types/react": "^17.0.35",
+    "@types/react": "^17.0.36",
     "@types/react-dom": "^17.0.11",
     "@types/react-relay": "^11.0.2",
     "@types/relay-config": "^6.0.2",
