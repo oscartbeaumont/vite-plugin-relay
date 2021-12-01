@@ -1,6 +1,5 @@
 import { test, expect, Page } from "@playwright/test";
 import { GraphQLResponseWithData as RelayGraphQLResponseWithData } from "relay-runtime";
-import path from "path";
 import { AppQueryResponse } from "./__generated__/AppQuery.graphql";
 
 // Mutable removes the readonly property from a type. This is done because the Relay compiler outputs types with readonly fields.
@@ -28,25 +27,7 @@ async function modifyGraphQLResponse(
   });
 }
 
-// This beforeEach hook ensures that the compiled Vite project is served at http://localhost/ for each test.
-test.beforeEach(async ({ page }) => {
-  await page.route("http://localhost/**", (route) => {
-    if (route.request().resourceType() === "document") {
-      return route.fulfill({
-        status: 200,
-        path: path.join(__dirname, "../dist/index.html"),
-      });
-    } else {
-      const url = new URL(route.request().url());
-      return route.fulfill({
-        status: 200,
-        path: path.join(__dirname, "../dist", url.pathname),
-      });
-    }
-  });
-});
-
-test("renders list with many ships", async ({ page }) => {
+test("renders list with many ships", async ({ page, baseURL }) => {
   await modifyGraphQLResponse(
     page,
     "https://api.spacex.land/graphql",
@@ -66,7 +47,7 @@ test("renders list with many ships", async ({ page }) => {
     },
   );
 
-  await page.goto(`http://localhost`, { waitUntil: "networkidle" });
+  await page.goto(baseURL || "/", { waitUntil: "networkidle" });
 
   // Check title exists and hence that page rendered correctly
   const titleTxt = page.locator("h1");
@@ -82,7 +63,7 @@ test("renders list with many ships", async ({ page }) => {
   await expect(await shipsListChildren.nth(1).textContent()).toBe("Ship Two");
 });
 
-test("renders list with no ships", async ({ page }) => {
+test("renders list with no ships", async ({ page, baseURL }) => {
   await modifyGraphQLResponse(
     page,
     "https://api.spacex.land/graphql",
@@ -92,7 +73,7 @@ test("renders list with no ships", async ({ page }) => {
     },
   );
 
-  await page.goto(`http://localhost`, { waitUntil: "networkidle" });
+  await page.goto(baseURL || "/", { waitUntil: "networkidle" });
 
   // Check title exists and hence that page rendered correctly
   const titleTxt = page.locator("h1");
