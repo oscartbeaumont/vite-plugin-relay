@@ -40,6 +40,18 @@ export default defineConfig({
 
 Now your project is setup to use Relay with Vite!
 
+## Common Issues
+
+### `Uncaught ReferenceError: global is not defined`
+
+If you experience this error in your browser console when using the plugin add the following define to your `index.html` file before importing your Javascript:
+
+```html
+<script>
+  let global = globalThis;
+</script>
+```
+
 ## Server Side Rendering
 
 If you are planning to use this plugin with server side rendering you may need to define `window`. You could do this by putting the following snippet in your [`entry-server.js`](https://vitejs.dev/guide/ssr.html#source-structure) file.
