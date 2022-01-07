@@ -6,8 +6,9 @@
     "dev": "concurrently \"npm:dev:*\"",
     "dev:vite": "vite",
     "dev:relay": "relay-compiler --watch",
+    "preview": "relay-compiler && vite preview --port 3000",
     "build": "relay-compiler && tsc --noEmit && vite build",
-    "test": "concurrently \"npm:build\" && playwright test"
+    "test": "playwright test"
   },
   "dependencies": {
     "react": "^17.0.0",
