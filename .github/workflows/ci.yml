@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
       # Note: This is disabled because it was causing issues with installation of the example application
       # - name: Use Node Modules Cache
       #   uses: actions/cache@v2
@@ -38,7 +38,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
       - name: Use Node Modules Cache
         uses: actions/cache@v2
         with:

@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
       - name: Install Dependencies for Vite Plugin Relay
         run: yarn install --frozen-lockfile
       - name: Build Vite Plugin Relay
