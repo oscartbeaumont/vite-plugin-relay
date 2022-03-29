@@ -1,6 +1,6 @@
-/** @type {import('relay-compiler/lib/bin/RelayCompilerMain').Config} */
 module.exports = {
   src: "./src",
+  eagerEsModules: true,
   schema: "./schema.graphql",
   language: "typescript",
 };

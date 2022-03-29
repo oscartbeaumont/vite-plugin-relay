@@ -7,14 +7,7 @@ export default {
     let code = src;
     if (/.(t|j)sx?/.test(id) && src.includes("graphql`")) {
       const out = transformSync(src, {
-        plugins: [
-          [
-            require.resolve("babel-plugin-relay"),
-            {
-              eagerESModules: true,
-            },
-          ],
-        ],
+        plugins: [[require.resolve("babel-plugin-relay")]],
         code: true,
       });
 
