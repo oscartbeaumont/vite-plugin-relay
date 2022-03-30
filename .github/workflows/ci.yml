@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v2
       # Note: This is disabled because it was causing issues with installation of the example application
       # - name: Use Node Modules Cache
-      #   uses: actions/cache@v2
+      #   uses: actions/cache@v3.0.1
       #   with:
       #     path: "**/node_modules"
       #     key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
@@ -40,7 +40,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
       - name: Use Node Modules Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.1
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
