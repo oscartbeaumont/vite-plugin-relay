@@ -16,6 +16,7 @@ export default {
           ],
         ],
         code: true,
+        filename: id,
       });
 
       if (!out?.code) throw new Error("vite-plugin-react Failed to build");
