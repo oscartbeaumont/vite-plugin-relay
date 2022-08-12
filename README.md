@@ -5,6 +5,12 @@
 
 Add relay support to your [Vite](https://vitejs.dev) projects.
 
+❤️ Special thanks to:
+
+- [@Brendonovich](https://github.com/Brendonovich) for general help
+- [@kesne](https://github.com/kesne) for adding [pnpm](https://pnpm.io) support
+- [@tobias-tengler](https://github.com/tobias-tengler) for adding Vite 3 support
+
 Created with the help of [@Brendonovich](https://github.com/Brendonovich) and thanks to [@kesne](https://github.com/kesne) for adding [pnpm](https://pnpm.io) support.
 
 ## Usage
