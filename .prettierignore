@@ -59,3 +59,5 @@ typings/
 
 # Build / generate output
 dist
+
+__generated__
