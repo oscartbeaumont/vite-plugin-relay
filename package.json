@@ -33,7 +33,7 @@
   },
   "peerDependencies": {
     "vite": ">=2.0.0",
-    "babel-plugin-relay": ">=13.0.0"
+    "babel-plugin-relay": ">=13.0.1"
   },
   "dependencies": {
     "@babel/core": "^7.18.10"
