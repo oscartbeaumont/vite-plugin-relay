@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { RelayEnvironmentProvider } from "react-relay";
 import { RelayEnvironment } from "./relay";
 import App from "./App";
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLDivElement).render(
   <React.StrictMode>
     <RelayEnvironmentProvider environment={RelayEnvironment}>
       <Suspense fallback={<h1>Loading Data...</h1>}>
@@ -12,5 +12,4 @@ ReactDOM.render(
       </Suspense>
     </RelayEnvironmentProvider>
   </React.StrictMode>,
-  document.getElementById("root"),
 );

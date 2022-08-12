@@ -1,29 +1,25 @@
+/**
+ * @generated SignedSource<<7a4b95ef879c0030e146bb655998df1e>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest } from "relay-runtime";
-
-export type AppQueryVariables = {};
-export type AppQueryResponse = {
+import { ConcreteRequest, Query } from "relay-runtime";
+export type AppQuery$variables = {};
+export type AppQuery$data = {
   readonly ships: ReadonlyArray<{
     readonly id: string | null;
     readonly name: string | null;
   } | null> | null;
 };
 export type AppQuery = {
-  readonly response: AppQueryResponse;
-  readonly variables: AppQueryVariables;
+  response: AppQuery$data;
+  variables: AppQuery$variables;
 };
-
-/*
-query AppQuery {
-  ships {
-    id
-    name
-  }
-}
-*/
 
 const node: ConcreteRequest = (function () {
   var v0 = [
@@ -80,5 +76,7 @@ const node: ConcreteRequest = (function () {
     },
   };
 })();
+
 (node as any).hash = "fe6589af5b8bfbe9722d3b296cc93444";
+
 export default node;
