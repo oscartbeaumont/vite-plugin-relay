@@ -5,11 +5,12 @@ export default {
   name: "vite:relay",
   transform(src, id) {
     let code = src;
+
     if (/.(t|j)sx?/.test(id) && src.includes("graphql`")) {
       const out = transformSync(src, {
         plugins: [
           [
-            require.resolve("babel-plugin-relay"),
+            "babel-plugin-relay",
             {
               eagerESModules: true,
             },
