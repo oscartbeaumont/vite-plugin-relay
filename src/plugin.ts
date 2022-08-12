@@ -12,14 +12,18 @@ export default {
           [
             "babel-plugin-relay",
             {
-              eagerESModules: true,
+              eagerEsModules: true,
             },
           ],
         ],
         code: true,
+        filename: id,
       });
 
-      if (!out?.code) throw new Error("vite-plugin-react Failed to build");
+      if (!out?.code) {
+        throw new Error(`vite-plugin-relay: Failed to transform ${id}`);
+      }
+
       code = out.code;
     }
 
