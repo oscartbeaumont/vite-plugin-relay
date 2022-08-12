@@ -6,6 +6,7 @@
     "name": "Oscar Beaumont",
     "email": "oscar@otbeaumont.me"
   },
+  "type": "module",
   "main": "dist/plugin.js",
   "types": "dist/plugin.d.ts",
   "files": [
