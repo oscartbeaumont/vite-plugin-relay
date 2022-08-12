@@ -9,25 +9,17 @@ Created with the help of [@Brendonovich](https://github.com/Brendonovich) and th
 
 ## Usage
 
-Add `vite-plugin-relay` and `relay` to your project.
+Follow Relay's guide on [how to add Relay to your project](https://relay.dev/docs/getting-started/installation-and-setup/).
+
+> ⚠️ Note: Install `babel-plugin-relay` and `graphql` as devDependencies as instructed, but skip the configuration of the babel plugin. `vite-plugin-relay` will invoke it for you!
+
+Install `vite-plugin-relay`:
 
 ```bash
-yarn add react-relay relay-runtime
-yarn add -D relay-compiler relay-config vite-plugin-relay
+yarn add -D vite-plugin-relay
 ```
 
-Next setup NPM scripts in the `package.json`. One is required for Vite and the other for the Relay Compiler
-
-```json
-"scripts": {
-  "dev": "vite",
-  "relay": "relay-compiler"
-},
-```
-
-Next setup `relay.config.js` more information about this can be found in the [official relay docs](https://relay.dev/docs/getting-started/installation-and-setup/#set-up-relay-with-a-single-config-file).
-
-Finally add `vite-plugin-relay` to your Vite configuration (`vite.config.ts`).
+Add `vite-plugin-relay` to your Vite configuration (`vite.config.ts` or `vite.config.js`):
 
 ```typescript
 import { defineConfig } from "vite";
@@ -39,6 +31,12 @@ export default defineConfig({
 ```
 
 Now your project is setup to use Relay with Vite!
+
+## How this plugin works
+
+Under the hood we are inovking the official `babel-plugin-relay`. This ensures that our plugin and `babel-plugin-relay` do not get out of sync over time and also reduces the maintainance costs of this project.
+
+Since v13 `babel-plugin-relay` automatically gets its configuration from either the `package.json`, `relay.config.js` or `relay.config.json`, so our plugin also doesn't have to expose a configuration API.
 
 ## Common Issues
 
