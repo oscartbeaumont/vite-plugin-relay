@@ -32,11 +32,11 @@
     "prepare": "husky install && yarn build"
   },
   "peerDependencies": {
-    "vite": ">2.0.0-0"
+    "vite": ">=2.0.0",
+    "babel-plugin-relay": ">=13.0.0"
   },
   "dependencies": {
-    "@babel/core": "^7.15.0",
-    "babel-plugin-relay": "^12.0.0"
+    "@babel/core": "^7.15.0"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.15",
