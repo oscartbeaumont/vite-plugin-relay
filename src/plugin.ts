@@ -1,4 +1,4 @@
-import type { Plugin } from "vite";
+import type { PluginOption } from "vite";
 import { transformSync } from "@babel/core";
 
 export default {
@@ -6,7 +6,7 @@ export default {
   transform(src, id) {
     let code = src;
 
-    if (/.(t|j)sx?/.test(id) && src.includes("graphql`")) {
+    if (/.(t|j)sx?/.test(id) && !id.includes("/node_modules/") && src.includes("graphql`")) {
       const out = transformSync(src, {
         plugins: [
           [
@@ -32,4 +32,4 @@ export default {
       map: null,
     };
   },
-} as Plugin;
+} as PluginOption;

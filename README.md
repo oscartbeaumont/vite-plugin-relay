@@ -19,10 +19,10 @@ Follow Relay's guide on [how to add Relay to your project](https://relay.dev/doc
 
 > ⚠️ Note: Install `babel-plugin-relay` (>= 13.0.1) and `graphql` as devDependencies as instructed, but skip the configuration of the babel plugin. `vite-plugin-relay` will invoke it for you!
 
-Install `vite-plugin-relay`:
+Add `vite-plugin-relay` to your `devDependencies`:
 
 ```bash
-yarn add -D vite-plugin-relay
+yarn add vite-plugin-relay -D
 ```
 
 Add `vite-plugin-relay` to your Vite configuration (`vite.config.ts` or `vite.config.js`):
