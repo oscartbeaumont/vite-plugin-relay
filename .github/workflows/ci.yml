@@ -24,7 +24,7 @@ jobs:
       - name: Install Dependencies for Vite Plugin Relay
         run: yarn install --frozen-lockfile
       - name: Install Playwright
-        run: npx playwright install --with-deps
+        run: npx playwright@1.17.1 install --with-deps
       - name: Build Vite Plugin Relay
         run: yarn build
       - name: Install Dependencies for Example Site
