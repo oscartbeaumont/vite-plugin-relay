@@ -6,7 +6,7 @@ export default {
   transform(src, id) {
     let code = src;
 
-    if (/.(t|j)sx?/.test(id) && !id.includes("/node_modules/") && src.includes("graphql`")) {
+    if (/.(t|j)sx?/.test(id) && src.includes("graphql`")) {
       const out = transformSync(src, {
         plugins: [
           [
