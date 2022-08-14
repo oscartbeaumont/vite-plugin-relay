@@ -36,6 +36,20 @@ export default defineConfig({
 });
 ```
 
+Configure `relay-compiler` to output artifacts with `export default` syntax, by setting `eagerEsModules` to `true`:
+
+```json
+{
+  "relay": {
+    "src": "./src",
+    "schema": "./src/schema.graphql",
+    "language": "typescript",
+    "eagerEsModules": true,
+    "exclude": ["**/node_modules/**", "**/__mocks__/**", "**/__generated__/**"]
+  }
+}
+```
+
 Now your project is setup to use Relay with Vite!
 
 ## How this plugin works

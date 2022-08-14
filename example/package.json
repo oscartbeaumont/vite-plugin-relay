@@ -33,6 +33,7 @@
   "relay": {
     "src": "./src",
     "schema": "./schema.graphql",
-    "language": "typescript"
+    "language": "typescript",
+    "eagerEsModules": true
   }
 }
