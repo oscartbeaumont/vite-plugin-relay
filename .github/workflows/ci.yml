@@ -27,10 +27,14 @@ jobs:
         run: npx playwright@1.17.1 install --with-deps
       - name: Build Vite Plugin Relay
         run: yarn build
-      - name: Install Dependencies for Example Site
-        run: yarn --cwd ./example install --frozen-lockfile
-      - name: Test Example Site
-        run: yarn --cwd ./example test
+      - name: Install Dependencies for Vite 3 Example Site
+        run: yarn --cwd ./examples/vite-3 install --frozen-lockfile
+      - name: Test Vite 3 Example Site
+        run: yarn --cwd ./examples/vite-3 test
+      - name: Install Dependencies for Vite 2 Example Site
+        run: yarn --cwd ./examples/vite-2 install --frozen-lockfile
+      - name: Test Vite 2 Example Site
+        run: yarn --cwd ./examples/vite-2 test
 
   lint:
     runs-on: ubuntu-latest

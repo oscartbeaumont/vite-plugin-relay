@@ -1,16 +1,16 @@
 {
   "name": "vite-plugin-relay",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "A vite plugin for relay",
   "author": {
     "name": "Oscar Beaumont",
     "email": "oscar@otbeaumont.me"
   },
-  "type": "module",
   "main": "dist/plugin.js",
-  "types": "dist/plugin.d.ts",
+  "types": "./index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "license": "MIT",
   "repository": {
@@ -28,13 +28,13 @@
   ],
   "scripts": {
     "build": "tsc -p .",
-    "lint": "prettier --check . && eslint src/** example/src/**",
-    "format": "prettier --write . && eslint src/** example/src/** --fix",
+    "lint": "prettier --check . && eslint src/** examples/vite-2/src/** examples/vite-3/src/**",
+    "format": "prettier --write . && eslint src/** examples/vite-2/src/** examples/vite-3/src/** --fix",
     "prepare": "husky install && yarn build"
   },
   "peerDependencies": {
-    "vite": ">=3.0.0",
-    "babel-plugin-relay": ">=13.0.1"
+    "babel-plugin-relay": ">=13.0.1",
+    "vite": ">=2.0.0"
   },
   "dependencies": {
     "@babel/core": "^7.18.10"
