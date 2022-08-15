@@ -1,7 +1,7 @@
 import type { PluginOption } from "vite";
 import { transformSync } from "@babel/core";
 
-module.exports = {
+export default {
   name: "vite:relay",
   transform(src, id) {
     let code = src;
