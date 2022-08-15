@@ -2033,11 +2033,6 @@ update-browserslist-db@^1.0.5:
     escalade "^3.1.1"
     picocolors "^1.0.0"
 
-"vite-plugin-relay@file:./../..":
-  version "2.0.0"
-  dependencies:
-    "@babel/core" "^7.18.10"
-
 vite@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.6.tgz#08e85ebaa34a3b647cb1365c87675b45f3511be0"
