@@ -17,7 +17,7 @@ Created with the help of [@Brendonovich](https://github.com/Brendonovich) and th
 
 Follow Relay's guide on [how to add Relay to your project](https://relay.dev/docs/getting-started/installation-and-setup/).
 
-> ⚠️ Note: Install `babel-plugin-relay` (>= 13.0.1) and `graphql` as devDependencies as instructed, but skip the configuration of the babel plugin. `vite-plugin-relay` will invoke it for you!
+> ⚠️ Note: Install `babel-plugin-relay` (>= 13.0.1) as devDependencies as instructed, but skip its configuration. `vite-plugin-relay` will invoke the babel plugin for you!
 
 Add `vite-plugin-relay` to your `devDependencies`:
 
