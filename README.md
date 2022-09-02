@@ -11,8 +11,6 @@ Add relay support to your [Vite](https://vitejs.dev) projects.
 - [@kesne](https://github.com/kesne) for adding [pnpm](https://pnpm.io) support
 - [@tobias-tengler](https://github.com/tobias-tengler) for adding Vite 3 support
 
-Created with the help of [@Brendonovich](https://github.com/Brendonovich) and thanks to [@kesne](https://github.com/kesne) for adding [pnpm](https://pnpm.io) support.
-
 ## Usage
 
 Follow Relay's guide on [how to add Relay to your project](https://relay.dev/docs/getting-started/installation-and-setup/).
