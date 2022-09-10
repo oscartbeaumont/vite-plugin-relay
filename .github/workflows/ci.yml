@@ -15,32 +15,20 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2
-      # Note: This is disabled because it was causing issues with installation of the example application
-      # - name: Use Node Modules Cache
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: "**/node_modules"
-      #     key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies for Vite Plugin Relay
-        run: yarn install --frozen-lockfile
+        run: pnpm i
       - name: Install Playwright
-        run: npx playwright@1.17.1 install --with-deps
+        run: npx playwright install --with-deps
       - name: Build Vite Plugin Relay
-        run: yarn build
-      - name: Create link for Vite Plugin Relay
-        run: yarn link
+        run: pnpm build
       - name: Install Dependencies for Vite 3 Example Site
-        run: yarn --cwd ./examples/vite-3 install --frozen-lockfile
-      - name: Link Vite Plugin Relay to Vite 3 Example Site
-        run: yarn --cwd ./examples/vite-3 link vite-plugin-relay
+        run: pnpm --filter example-vite-3 i
       - name: Test Vite 3 Example Site
-        run: yarn --cwd ./examples/vite-3 test
+        run: pnpm --filter example-vite-3 test
       - name: Install Dependencies for Vite 2 Example Site
-        run: yarn --cwd ./examples/vite-2 install --frozen-lockfile
-      - name: Link Vite Plugin Relay to Vite 2 Example Site
-        run: yarn --cwd ./examples/vite-2 link vite-plugin-relay
+        run: pnpm --filter example-vite-2 i
       - name: Test Vite 2 Example Site
-        run: yarn --cwd ./examples/vite-2 test
+        run: pnpm --filter example-vite-2 test
 
   lint:
     runs-on: ubuntu-latest
@@ -49,12 +37,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2
-      - name: Use Node Modules Cache
-        uses: actions/cache@v2
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies for Vite Plugin Relay
-        run: yarn install --frozen-lockfile
+        run: pnpm i
       - name: Lint
-        run: yarn lint
+        run: pnpm lint

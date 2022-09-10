@@ -13,9 +13,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
       - name: Install Dependencies for Vite Plugin Relay
-        run: yarn install --frozen-lockfile
+        run: pnpm i
       - name: Build Vite Plugin Relay
-        run: yarn build
+        run: pnpm build
       - name: Publish to NPM
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
