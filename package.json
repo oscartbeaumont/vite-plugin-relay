@@ -36,28 +36,29 @@
   "scripts": {
     "build": "tsup src/plugin.ts --dts --clean --format cjs,esm --no-splitting --env.NODE_ENV production",
     "dev": "tsup src/plugin.ts --dts --clean --format cjs,esm --no-splitting --watch",
+    "test": "pnpm -r --parallel --filter=!vite-plugin-relay exec pnpm test",
     "lint": "prettier --check . && eslint src/** examples/vite-2/src/** examples/vite-3/src/**",
     "format": "prettier --write . && eslint src/** examples/vite-2/src/** examples/vite-3/src/** --fix",
     "prepare": "husky install && yarn build"
   },
   "peerDependencies": {
-    "babel-plugin-relay": ">=13.0.1",
+    "babel-plugin-relay": "^14.1.0",
     "vite": ">=2.0.0"
   },
   "dependencies": {
-    "@babel/core": "^7.18.10"
+    "@babel/core": "^7.19.0"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.19",
-    "@types/node": "^18.7.2",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
-    "eslint": "^8.21.0",
+    "@types/node": "^18.7.16",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
-    "tsup": "^6.2.2",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.7"
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.0"
   }
 }

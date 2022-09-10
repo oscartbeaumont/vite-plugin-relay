@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<2a9a8276fe17ac1da29aa91c0d52dbe6>>
+ * @generated SignedSource<<7a4b95ef879c0030e146bb655998df1e>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -10,17 +10,15 @@
 
 import { ConcreteRequest, Query } from 'relay-runtime';
 export type AppQuery$variables = {};
-export type AppQueryVariables = AppQuery$variables;
 export type AppQuery$data = {
   readonly ships: ReadonlyArray<{
     readonly id: string | null;
     readonly name: string | null;
   } | null> | null;
 };
-export type AppQueryResponse = AppQuery$data;
 export type AppQuery = {
-  variables: AppQueryVariables;
   response: AppQuery$data;
+  variables: AppQuery$variables;
 };
 
 const node: ConcreteRequest = (function(){

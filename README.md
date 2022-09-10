@@ -77,3 +77,15 @@ if (typeof (window as any).global === 'undefined') {
   (window as any).global = globalThis;
 }
 ```
+
+## Contributing
+
+```
+git clone ...
+pnpm i
+# If you have never run Playwright run `npx playwright install` to setup your system.
+cd examples/vite-3
+pnpm dev
+
+pnpm format # Do this before doing a commit
+```

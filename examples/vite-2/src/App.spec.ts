@@ -1,7 +1,7 @@
 import { test, expect, Page } from "@playwright/test";
 import { GraphQLResponseWithData as RelayGraphQLResponseWithData } from "relay-runtime";
 import path from "path";
-import { AppQueryResponse } from "./__generated__/AppQuery.graphql";
+import { AppQuery } from "./__generated__/AppQuery.graphql";
 
 // Mutable removes the readonly property from a type. This is done because the Relay compiler outputs types with readonly fields.
 type Mutable<T> = {
@@ -50,7 +50,7 @@ test("renders list with many ships", async ({ page }) => {
   await modifyGraphQLResponse(
     page,
     "https://api.spacex.land/graphql",
-    (body: GraphQLResponseWithData<Mutable<AppQueryResponse>>) => {
+    (body: GraphQLResponseWithData<Mutable<AppQuery["response"]>>) => {
       body.data.ships = [
         {
           id: "one",
@@ -86,7 +86,7 @@ test("renders list with no ships", async ({ page }) => {
   await modifyGraphQLResponse(
     page,
     "https://api.spacex.land/graphql",
-    (body: GraphQLResponseWithData<Mutable<AppQueryResponse>>) => {
+    (body: GraphQLResponseWithData<Mutable<AppQuery["response"]>>) => {
       body.data.ships = [];
       return body;
     },
