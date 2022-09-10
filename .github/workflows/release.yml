@@ -14,6 +14,8 @@ jobs:
         uses: actions/setup-node@v2
       - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
+        with:
+          version: latest
       - name: Install Dependencies for Vite Plugin Relay
         run: pnpm i
       - name: Build Vite Plugin Relay
