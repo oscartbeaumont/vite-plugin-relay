@@ -15,9 +15,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
       - name: Install Dependencies for Vite Plugin Relay
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
         run: pnpm i
       - name: Install Playwright
         run: npx playwright install --with-deps
@@ -39,8 +39,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Node.js
         uses: actions/setup-node@v2
-      - uses: pnpm/action-setup@v2.0.1
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
       - name: Install Dependencies for Vite Plugin Relay
         run: pnpm i
       - name: Lint
