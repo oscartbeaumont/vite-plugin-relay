@@ -59,3 +59,7 @@ typings/
 
 # Build / generate output
 dist
+
+pnpm-lock.yaml
+
+__generated__

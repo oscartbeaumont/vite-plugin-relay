@@ -1,24 +1,22 @@
-import type { Plugin } from "vite";
+import type { PluginOption } from "vite";
 import { transformSync } from "@babel/core";
 
 export default {
   name: "vite:relay",
   transform(src, id) {
     let code = src;
+
     if (/.(t|j)sx?/.test(id) && src.includes("graphql`")) {
       const out = transformSync(src, {
-        plugins: [
-          [
-            require.resolve("babel-plugin-relay"),
-            {
-              eagerESModules: true,
-            },
-          ],
-        ],
+        plugins: [["babel-plugin-relay"]],
         code: true,
+        filename: id,
       });
 
-      if (!out?.code) throw new Error("vite-plugin-react Failed to build");
+      if (!out?.code) {
+        throw new Error(`vite-plugin-relay: Failed to transform ${id}`);
+      }
+
       code = out.code;
     }
 
@@ -27,4 +25,4 @@ export default {
       map: null,
     };
   },
-} as Plugin;
+} as PluginOption;
