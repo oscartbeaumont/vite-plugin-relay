@@ -2,6 +2,7 @@
   "name": "example-vite-3",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "concurrently \"npm:dev:*\"",
     "dev:vite": "vite",
