@@ -52,7 +52,7 @@ Now your project is setup to use Relay with Vite!
 
 ## How this plugin works
 
-Under the hood we are inovking the official `babel-plugin-relay`. This ensures that our plugin and `babel-plugin-relay` do not get out of sync over time and also reduces the maintainance costs of this project.
+Under the hood we are invoking the official `babel-plugin-relay`. This ensures that our plugin and `babel-plugin-relay` do not get out of sync over time and also reduces the maintainance costs of this project.
 
 Since v13 `babel-plugin-relay` automatically gets its configuration from either the `package.json`, `relay.config.js` or `relay.config.json`, so our plugin also doesn't have to expose a configuration API.
 
