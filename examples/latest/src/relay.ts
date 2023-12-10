@@ -1,7 +1,7 @@
 import { Environment, Network, Observable, RecordSource, Store } from "relay-runtime";
 
 async function FetchGraphQL(query: any, variables: any) /* eslint-disable-line @typescript-eslint/no-explicit-any */ {
-  const response = await fetch("https://api.spacex.land/graphql", {
+  const response = await fetch("https://spacex-production.up.railway.app/graphql", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -22,6 +22,6 @@ export const RelayEnvironment = new Environment({
         sink.next(payload);
         sink.complete();
       });
-    })),
+    }),),
   store: new Store(new RecordSource()),
 });

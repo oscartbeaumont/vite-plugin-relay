@@ -1,0 +1,39 @@
+{
+  "name": "example-latest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:*\"",
+    "dev:vite": "vite",
+    "dev:relay": "relay-compiler --watch",
+    "build": "relay-compiler --validate && tsc --noEmit && vite build",
+    "test": "concurrently \"npm:build\" && playwright test"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-relay": "^16.0.0",
+    "relay-runtime": "16.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.40.1",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/react-relay": "^16.0.5",
+    "@types/relay-runtime": "^14.1.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "babel-plugin-relay": "^16.0.0",
+    "concurrently": "^8.2.2",
+    "relay-compiler": "^16.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.7",
+    "vite-plugin-relay": "workspace:*"
+  },
+  "relay": {
+    "src": "./src",
+    "schema": "./schema.graphql",
+    "language": "typescript",
+    "eagerEsModules": true
+  }
+}

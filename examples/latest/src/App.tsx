@@ -1,6 +1,5 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { graphql, useLazyLoadQuery } from "react-relay";
-
 import { AppQuery } from "./__generated__/AppQuery.graphql";
 
 export default function App(): ReactElement {
