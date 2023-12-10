@@ -1,5 +1,5 @@
 {
-  "name": "example-vite-3",
+  "name": "example-latest",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "dev:vite": "vite",
     "dev:relay": "relay-compiler --watch",
     "build": "relay-compiler --validate && tsc --noEmit && vite build",
-    "test": "concurrently \"npm:build\" && playwright test"
+    "debug": "npm:build && tsc --noEmit false --outDir dist2 && playwright test ./dist2"
   },
   "dependencies": {
     "react": "^18.2.0",
