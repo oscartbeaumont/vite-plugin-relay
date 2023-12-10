@@ -22,13 +22,10 @@ jobs:
       - name: Install Dependencies for Vite Plugin Relay
         run: pnpm i
       - name: Install Playwright
-        run: npx playwright@1.20.1 install --with-deps
+        run: npx playwright install --with-deps
       - name: Build Vite Plugin Relay
         run: pnpm build
       - name: Install Dependencies for Example
-        env:
-          # https://playwright.dev/docs/browsers#skip-browser-downloads
-          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         run: pnpm --filter example-latest i
       - name: Test Example
         run: pnpm --filter example-latest test
