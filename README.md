@@ -1,15 +1,25 @@
 <h1 align="center">Vite Plugin Relay</h1>
 
-[![NPM](https://img.shields.io/npm/v/vite-plugin-relay)](https://www.npmjs.com/package/vite-plugin-relay)
-[![CI workflow](https://github.com/oscartbeaumont/vite-plugin-relay/actions/workflows/ci.yml/badge.svg)](https://github.com/oscartbeaumont/vite-plugin-relay/actions)
+<div align="center">
+  
+  [![NPM](https://img.shields.io/npm/v/vite-plugin-relay)](https://www.npmjs.com/package/vite-plugin-relay)
+  [![CI workflow](https://github.com/oscartbeaumont/vite-plugin-relay/actions/workflows/ci.yml/badge.svg)](https://github.com/oscartbeaumont/vite-plugin-relay/actions)
 
-Add relay support to your [Vite](https://vitejs.dev) projects.
+</div>
+
+<div align="center">
+    Add relay support to your <a href="https://vitejs.dev">Vite</a> projects.
+</div>
+
+<br />
 
 ❤️ Special thanks to:
 
 - [@Brendonovich](https://github.com/Brendonovich) for general help
 - [@kesne](https://github.com/kesne) for adding [pnpm](https://pnpm.io) support
 - [@tobias-tengler](https://github.com/tobias-tengler) for adding Vite 3 support
+
+I **do not** actively use this project anymore, however, it will still receive periodic updates.
 
 ## Usage
 
