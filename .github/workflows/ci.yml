@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies for Vite Plugin Relay
         run: pnpm i
       - name: Install Playwright
-        run: npx playwright install --with-deps
+        run: pnpm run playwright install --with-deps
       - name: Build Vite Plugin Relay
         run: pnpm build
       - name: Install Dependencies for Example
