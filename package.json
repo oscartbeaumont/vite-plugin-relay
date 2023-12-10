@@ -42,7 +42,7 @@
     "prepare": "husky install && yarn build"
   },
   "peerDependencies": {
-    "babel-plugin-relay": "^14.1.0",
+    "babel-plugin-relay": ">=14.1.0",
     "vite": ">=2.0.0"
   },
   "dependencies": {
