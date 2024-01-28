@@ -24,11 +24,7 @@ export default function App(): ReactElement {
         Data Viewer
       </h1>
       <h2 id="ships-heading">Ships</h2>
-      <ul aria-labelledby="ships-heading">
-        {data.ships?.map((ship) => (
-          <li key={ship?.id}>{ship?.name}</li>
-        ))}
-      </ul>
+      <ul aria-labelledby="ships-heading">{data.ships?.map((ship) => <li key={ship?.id}>{ship?.name}</li>)}</ul>
     </>
   );
 }

@@ -37,8 +37,8 @@
     "build": "tsup src/plugin.ts --dts --clean --format cjs,esm --no-splitting --env.NODE_ENV production",
     "dev": "tsup src/plugin.ts --dts --clean --format cjs,esm --no-splitting --watch",
     "test": "pnpm -r --parallel --filter=!vite-plugin-relay exec pnpm test",
-    "lint": "prettier --check . && eslint src/** examples/vite-2/src/** examples/vite-3/src/**",
-    "format": "prettier --write . && eslint src/** examples/vite-2/src/** examples/vite-3/src/** --fix",
+    "lint": "prettier --check . && eslint src/** examples/latest/src/**",
+    "format": "prettier --write . && eslint src/** examples/latest/src/** --fix",
     "prepare": "husky install && yarn build"
   },
   "peerDependencies": {
