@@ -22,17 +22,9 @@ jobs:
       - name: Install Dependencies for Vite Plugin Relay
         run: pnpm i
       - name: Install Playwright
-        run: npx playwright install --with-deps
-      - name: Build Vite Plugin Relay
-        run: pnpm build
-      - name: Install Dependencies for Vite 3 Example Site
-        run: pnpm --filter example-vite-3 i
-      - name: Test Vite 3 Example Site
-        run: pnpm --filter example-vite-3 test
-      - name: Install Dependencies for Vite 2 Example Site
-        run: pnpm --filter example-vite-2 i
-      - name: Test Vite 2 Example Site
-        run: pnpm --filter example-vite-2 test
+        run: pnpm exec playwright install --with-deps
+      - name: Test Example Site
+        run: pnpm --filter example test
 
   lint:
     runs-on: ubuntu-latest

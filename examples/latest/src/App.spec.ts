@@ -1,7 +1,8 @@
 import { test, expect, Page } from "@playwright/test";
 import { GraphQLResponseWithData as RelayGraphQLResponseWithData } from "relay-runtime";
-import path from "path";
 import { AppQuery$data } from "./__generated__/AppQuery.graphql";
+
+const apiUrl = "https://spacex-production.up.railway.app/graphql";
 
 // Mutable removes the readonly property from a type. This is done because the Relay compiler outputs types with readonly fields.
 type Mutable<T> = {
@@ -34,37 +35,33 @@ test.beforeEach(async ({ page }) => {
     if (route.request().resourceType() === "document") {
       return route.fulfill({
         status: 200,
-        path: path.join(__dirname, "../dist/index.html"),
+        path: new URL("../dist/index.html", import.meta.url).pathname,
       });
     } else {
       const url = new URL(route.request().url());
       return route.fulfill({
         status: 200,
-        path: path.join(__dirname, "../dist", url.pathname),
+        path: new URL("../dist" + url.pathname, import.meta.url).pathname,
       });
     }
   });
 });
 
 test("renders list with many ships", async ({ page }) => {
-  await modifyGraphQLResponse(
-    page,
-    "https://api.spacex.land/graphql",
-    (body: GraphQLResponseWithData<Mutable<AppQuery$data>>) => {
-      body.data.ships = [
-        {
-          id: "one",
-          name: "Ship One",
-        },
-        {
-          id: "two",
-          name: "Ship Two",
-        },
-      ];
+  await modifyGraphQLResponse(page, apiUrl, (body: GraphQLResponseWithData<Mutable<AppQuery$data>>) => {
+    body.data.ships = [
+      {
+        id: "one",
+        name: "Ship One",
+      },
+      {
+        id: "two",
+        name: "Ship Two",
+      },
+    ];
 
-      return body;
-    },
-  );
+    return body;
+  });
 
   await page.goto(`http://localhost`, { waitUntil: "networkidle" });
 
@@ -83,14 +80,10 @@ test("renders list with many ships", async ({ page }) => {
 });
 
 test("renders list with no ships", async ({ page }) => {
-  await modifyGraphQLResponse(
-    page,
-    "https://api.spacex.land/graphql",
-    (body: GraphQLResponseWithData<Mutable<AppQuery$data>>) => {
-      body.data.ships = [];
-      return body;
-    },
-  );
+  await modifyGraphQLResponse(page, apiUrl, (body: GraphQLResponseWithData<Mutable<AppQuery$data>>) => {
+    body.data.ships = [];
+    return body;
+  });
 
   await page.goto(`http://localhost`, { waitUntil: "networkidle" });
 
