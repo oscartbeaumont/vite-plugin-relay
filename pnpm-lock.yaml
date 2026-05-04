@@ -95,8 +95,8 @@ importers:
         specifier: ^8.2.2
         version: 8.2.2
       relay-compiler:
-        specifier: ^16.0.0
-        version: 16.0.0
+        specifier: ^20.1.1
+        version: 20.1.1
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -2331,8 +2331,8 @@ packages:
   /regenerator-runtime@0.14.0:
     resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
 
-  /relay-compiler@16.0.0:
-    resolution: {integrity: sha512-qZKII4EN1R7VdEoJyDxzBtsfhLOJ8WLfl7iESk8h3HfbyHJzw2ygFuk334Qjeq+QN6soCim4quhJpAgp0+qBlQ==}
+  /relay-compiler@20.1.1:
+    resolution: {integrity: sha512-J/FFFLS/3vnbDkyQMw8l3Ev7dNHXMgC1RAs0fITz4Q63TFPOw142knKxY1Mm5ZZBABkAs9g2JghXaqM+phwTxw==}
     hasBin: true
     dev: true
 

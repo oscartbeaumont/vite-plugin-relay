@@ -26,7 +26,7 @@
     "@vitejs/plugin-react": "^6.0.1",
     "babel-plugin-relay": "^16.0.0",
     "concurrently": "^8.2.2",
-    "relay-compiler": "^16.0.0",
+    "relay-compiler": "^20.1.1",
     "typescript": "^5.3.3",
     "vite": "^5.0.7",
     "vite-plugin-relay": "workspace:*"
