@@ -1,3 +1,14 @@
 packages:
   - "examples/*"
   - "."
+
+# Dependency build scripts must be explicitly approved. pnpm >=10.3 fails the
+# install (ERR_PNPM_IGNORED_BUILDS) when it finds unreviewed postinstall scripts.
+allowBuilds:
+  "@swc/core": true
+  esbuild: true
+
+# pnpm >=11 delays installation of freshly published versions by default and
+# refuses to use a lockfile containing them. Opt out so CI installs are
+# reproducible instead of depending on when a release happened to be published.
+minimumReleaseAge: 0
