@@ -1,14 +1,13 @@
 /**
- * @generated SignedSource<<9c7eb0dd7121a9848f4cab80b95e4757>>
+ * @generated SignedSource<<5b8e0160ff734dbcd3814c22ebb7dcb2>>
  * @lightSyntaxTransform
- * @nogrep
  */
 
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest, Query } from 'relay-runtime';
+import { ConcreteRequest } from 'relay-runtime';
 export type AppQuery$variables = Record<PropertyKey, never>;
 export type AppQuery$data = {
   readonly ships: ReadonlyArray<{
@@ -55,7 +54,7 @@ return {
     "kind": "Fragment",
     "metadata": null,
     "name": "AppQuery",
-    "selections": (v0/*: any*/),
+    "selections": (v0/*:: as any*/),
     "type": "Query",
     "abstractKey": null
   },
@@ -64,7 +63,7 @@ return {
     "argumentDefinitions": [],
     "kind": "Operation",
     "name": "AppQuery",
-    "selections": (v0/*: any*/)
+    "selections": (v0/*:: as any*/)
   },
   "params": {
     "cacheID": "5d4f179d9fd77529c8d5229f95d52f65",
