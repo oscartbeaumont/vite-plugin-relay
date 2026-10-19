@@ -27,7 +27,7 @@
     "babel-plugin-relay": "^21.0.1",
     "concurrently": "^8.2.2",
     "relay-compiler": "^21.0.1",
-    "typescript": "^5.3.3",
+    "typescript": "^7.0.2",
     "vite": "^8.0.0",
     "vite-plugin-relay": "workspace:*"
   },
