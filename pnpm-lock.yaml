@@ -64,8 +64,8 @@ importers:
         specifier: ^16.0.0
         version: 16.2.0(react@19.3.1)
       relay-runtime:
-        specifier: 16.0.0
-        version: 16.0.0
+        specifier: 21.0.1
+        version: 21.0.1
     devDependencies:
       '@playwright/test':
         specifier: 1.59.1
@@ -1775,11 +1775,11 @@ packages:
     resolution: {integrity: sha512-Wqlg3MtHyBlAYByVo24Wy9H3n2bAw991gPmzdo3XfNv+TzhI8zuGogtiae+7NORI7zhghgZaHC7Sp8S8ZPRYEA==}
     hasBin: true
 
-  relay-runtime@16.0.0:
-    resolution: {integrity: sha512-gJ70upfOxmFgtvFEKn7sU72uN2XF9Bg5Bml9oGRqe0rFWJDj1ItsljWzOZ972EyDE+pZG/VKbqiz3gUjhbsejQ==}
-
   relay-runtime@16.2.0:
     resolution: {integrity: sha512-SrIyYItH1EZUj37NI8nZALasuq7mNyFrrSNgMefhgxNZxTVnr1KCp43LaxUfZqhsWbw4Y00JSGDRQXlcv4STHQ==}
+
+  relay-runtime@21.0.1:
+    resolution: {integrity: sha512-OS+We56sp6gkGVEcce9VCNOeg/sMbxT9unEoerQPgNAICHowSWrXNc6LJxF2OqjypxYF7kaLDSPPiaPii2Pw1g==}
 
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
@@ -3524,7 +3524,7 @@ snapshots:
 
   relay-compiler@21.0.1: {}
 
-  relay-runtime@16.0.0:
+  relay-runtime@16.2.0:
     dependencies:
       '@babel/runtime': 7.29.10
       fbjs: 3.0.5
@@ -3532,7 +3532,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  relay-runtime@16.2.0:
+  relay-runtime@21.0.1:
     dependencies:
       '@babel/runtime': 7.29.10
       fbjs: 3.0.5

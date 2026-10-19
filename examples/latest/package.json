@@ -14,7 +14,7 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-relay": "^16.0.0",
-    "relay-runtime": "16.0.0"
+    "relay-runtime": "21.0.1"
   },
   "devDependencies": {
     "@playwright/test": "1.59.1",
