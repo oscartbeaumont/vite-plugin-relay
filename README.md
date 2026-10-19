@@ -44,6 +44,23 @@ export default defineConfig({
 });
 ```
 
+If `babel-plugin-relay` cannot discover your Relay config by itself (see [Monorepos, workspaces and multi-project configs](#monorepos-workspaces-and-multi-project-configs)), pass the options explicitly with `createRelayPlugin` instead:
+
+```typescript
+import { defineConfig } from "vite";
+import { createRelayPlugin } from "vite-plugin-relay";
+
+export default defineConfig({
+  plugins: [
+    ...,
+    createRelayPlugin({
+      artifactDirectory: "./src/__generated__",
+      eagerEsModules: true,
+    }),
+  ],
+});
+```
+
 Configure `relay-compiler` to output artifacts with `export default` syntax, by setting `eagerEsModules` to `true`:
 
 ```json
@@ -64,7 +81,33 @@ Now your project is setup to use Relay with Vite!
 
 Under the hood we are invoking the official `babel-plugin-relay`. This ensures that our plugin and `babel-plugin-relay` do not get out of sync over time and also reduces the maintainance costs of this project.
 
-Since v13 `babel-plugin-relay` automatically gets its configuration from either the `package.json`, `relay.config.js` or `relay.config.json`, so our plugin also doesn't have to expose a configuration API.
+Since v13 `babel-plugin-relay` automatically gets its configuration from either the `package.json`, `relay.config.js` or `relay.config.json`, so our plugin also doesn't have to expose a configuration API. It searches for that config starting from the **current working directory**, which works for most projects but not all (see below). When it guesses wrong, use `createRelayPlugin(options)` to pass the options explicitly.
+
+## Monorepos, workspaces and multi-project configs
+
+`babel-plugin-relay` reads its config from the process working directory and only understands the top-level `eagerEsModules`/`artifactDirectory` options. That breaks in a few setups:
+
+- **Vitest workspaces / monorepos** where Vite is run from the repository root, so the working directory is not the package directory and the package's `relay.config.js` is never found.
+- **Multi-project Relay configs** (the `projects`/`sources` format). `eagerEsModules` and the artifact directory are configured per project and are ignored, which shows up as `ReferenceError: require is not defined` in the browser when `babel-plugin-relay` emits a `require()` call.
+
+For these, pass the options yourself with `createRelayPlugin`:
+
+```typescript
+import { createRelayPlugin } from "vite-plugin-relay";
+
+export default defineConfig({
+  plugins: [
+    createRelayPlugin({
+      // Relative to the Vite root.
+      artifactDirectory: "./src/__generated__",
+      // Required for Vite; defaults to false in babel-plugin-relay before v21.
+      eagerEsModules: true,
+    }),
+  ],
+});
+```
+
+Every other option is forwarded to `babel-plugin-relay` unchanged.
 
 ## Common Issues
 
