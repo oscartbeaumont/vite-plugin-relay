@@ -63,3 +63,6 @@ dist
 pnpm-lock.yaml
 
 __generated__
+
+test-results
+playwright-report

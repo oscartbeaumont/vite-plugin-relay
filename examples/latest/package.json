@@ -13,11 +13,11 @@
   "dependencies": {
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "react-relay": "^16.0.0",
-    "relay-runtime": "16.0.0"
+    "react-relay": "^21.0.1",
+    "relay-runtime": "21.0.1"
   },
   "devDependencies": {
-    "@playwright/test": "1.59.1",
+    "@playwright/test": "1.64.1",
     "@types/node": "^20.10.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.0",

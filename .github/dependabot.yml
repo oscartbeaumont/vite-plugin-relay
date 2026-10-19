@@ -4,11 +4,30 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
+    # One PR per day for all npm updates. Related packages have to move
+    # together anyway: a lone `react-relay` or `relay-runtime` major bump
+    # breaks the example because the two versions stop matching.
+    groups:
+      npm:
+        patterns:
+          - "*"
+    ignore:
+      # TypeScript 7 is the native compiler and no longer ships the JavaScript
+      # compiler API. tsup's `--dts` step (rollup-plugin-dts) and
+      # typescript-eslint both depend on it, so upgrading breaks the build and
+      # lint. Drop this once those tools support TypeScript >= 6.1.
+      - dependency-name: "typescript"
+        update-types:
+          - "version-update:semver-major"
 
   # - package-ecosystem: "npm"
   #   directory: "/examples/vite-2"
