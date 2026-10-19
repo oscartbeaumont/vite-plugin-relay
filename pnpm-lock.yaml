@@ -61,8 +61,8 @@ importers:
         specifier: ^19.2.5
         version: 19.3.1(react@19.3.1)
       react-relay:
-        specifier: ^16.0.0
-        version: 16.2.0(react@19.3.1)
+        specifier: ^21.0.1
+        version: 21.0.1(react@19.3.1)
       relay-runtime:
         specifier: 16.0.0
         version: 16.0.0
@@ -1758,10 +1758,10 @@ packages:
     peerDependencies:
       react: ^19.3.1
 
-  react-relay@16.2.0:
-    resolution: {integrity: sha512-f/HtC4whyYmK6/WUeOVakXRoBkV+JEgoSeBHXfIC2U6AuH14NrKXnFicX65LksfzgD1OUfYF6IqGQ4MvO52lTQ==}
+  react-relay@21.0.1:
+    resolution: {integrity: sha512-08BBmpdolP8vslClnszG+g4vkcbVHvaoR0BDHyhicwpCfbtnVGe73/MfPja/xj30eLWSP5WPYNqZupTdEPZvtw==}
     peerDependencies:
-      react: ^16.9.0 || ^17 || ^18
+      react: ^16.9.0 || ^17 || ^18 || ^19
 
   react@19.3.1:
     resolution: {integrity: sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==}
@@ -1778,8 +1778,8 @@ packages:
   relay-runtime@16.0.0:
     resolution: {integrity: sha512-gJ70upfOxmFgtvFEKn7sU72uN2XF9Bg5Bml9oGRqe0rFWJDj1ItsljWzOZ972EyDE+pZG/VKbqiz3gUjhbsejQ==}
 
-  relay-runtime@16.2.0:
-    resolution: {integrity: sha512-SrIyYItH1EZUj37NI8nZALasuq7mNyFrrSNgMefhgxNZxTVnr1KCp43LaxUfZqhsWbw4Y00JSGDRQXlcv4STHQ==}
+  relay-runtime@21.0.1:
+    resolution: {integrity: sha512-OS+We56sp6gkGVEcce9VCNOeg/sMbxT9unEoerQPgNAICHowSWrXNc6LJxF2OqjypxYF7kaLDSPPiaPii2Pw1g==}
 
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
@@ -3507,14 +3507,14 @@ snapshots:
       react: 19.3.1
       scheduler: 0.28.0
 
-  react-relay@16.2.0(react@19.3.1):
+  react-relay@21.0.1(react@19.3.1):
     dependencies:
       '@babel/runtime': 7.29.10
       fbjs: 3.0.5
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 19.3.1
-      relay-runtime: 16.2.0
+      relay-runtime: 21.0.1
     transitivePeerDependencies:
       - encoding
 
@@ -3532,7 +3532,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  relay-runtime@16.2.0:
+  relay-runtime@21.0.1:
     dependencies:
       '@babel/runtime': 7.29.10
       fbjs: 3.0.5

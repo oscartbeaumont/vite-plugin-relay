@@ -13,7 +13,7 @@
   "dependencies": {
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "react-relay": "^16.0.0",
+    "react-relay": "^21.0.1",
     "relay-runtime": "16.0.0"
   },
   "devDependencies": {
