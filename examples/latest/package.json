@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "react": "^19.2.5",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.2.5",
     "react-relay": "^16.0.0",
     "relay-runtime": "16.0.0"
   },
@@ -20,7 +20,7 @@
     "@playwright/test": "1.59.1",
     "@types/node": "^20.10.4",
     "@types/react": "^19.2.14",
-    "@types/react-dom": "^18.2.17",
+    "@types/react-dom": "^19.2.0",
     "@types/react-relay": "^16.0.5",
     "@types/relay-runtime": "^14.1.19",
     "@vitejs/plugin-react": "^6.0.1",
