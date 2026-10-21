@@ -3,6 +3,12 @@ name: Release
 on:
   release:
     types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  # Required for npm trusted publishing (OIDC). No NPM_TOKEN needed.
+  id-token: write
 
 jobs:
   release:
@@ -12,6 +18,13 @@ jobs:
         uses: actions/checkout@v7.0.1
       - name: Setup Node.js
         uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          registry-url: "https://registry.npmjs.org"
+          package-manager-cache: false
+      # Trusted publishing needs npm >= 11.5.1.
+      - name: Update npm
+        run: npm install -g npm@latest
       - name: Install pnpm
         uses: pnpm/action-setup@v6.1.0
         with:
@@ -21,8 +34,4 @@ jobs:
       - name: Build Vite Plugin Relay
         run: pnpm build
       - name: Publish to NPM
-        run: |
-          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          npm publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
