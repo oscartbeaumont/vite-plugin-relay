@@ -11,24 +11,24 @@
     "test": "concurrently \"npm:build\" && playwright test"
   },
   "dependencies": {
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-relay": "^21.0.1",
     "relay-runtime": "21.0.1"
   },
   "devDependencies": {
     "@playwright/test": "1.65.1",
-    "@types/node": "^26.6.5",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "@types/react-relay": "^18.2.1",
     "@types/relay-runtime": "^20.1.1",
-    "@vitejs/plugin-react": "^6.0.1",
+    "@vitejs/plugin-react": "^6.3.0",
     "babel-plugin-relay": "^21.0.1",
-    "concurrently": "^10.0.6",
+    "concurrently": "^10.0.7",
     "relay-compiler": "^21.0.1",
     "typescript": "^5.3.3",
-    "vite": "^8.3.5",
+    "vite": "^8.3.8",
     "vite-plugin-relay": "workspace:*"
   },
   "relay": {
